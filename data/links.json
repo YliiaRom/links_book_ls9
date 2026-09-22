@@ -1,0 +1,41 @@
+[
+  {
+    "id": "49aa1956-9579-400c-a706-5b91769ccbc3",
+    "school": "fr",
+    "themes": "py",
+    "title": "jinja",
+    "title_link": "https://jinja.palletsprojects.com/en/stable/templates/",
+    "description": "шаблонизатор",
+    "links": "https://www.youtube.com/live/0LUf2DwhTKc",
+    "number_lection": 9,
+    "time_lection": "00.13",
+    "sub_description": "{{ x }}/ {% for x in xxx %}\r\nextend\r\ninclude\r\nForm",
+    "color_decorator": "yellow"
+  },
+  {
+    "id": "48c85e7f-ba56-495c-afea-1730890adc3c",
+    "school": "fr",
+    "themes": "py",
+    "title": "FastAPI",
+    "title_link": "https://fastapi.tiangolo.com/ru/",
+    "description": "створення API.",
+    "links": "https://www.youtube.com/live/b0dMQxV59Wg",
+    "number_lection": 7,
+    "time_lection": "01.01",
+    "sub_description": "Starlette — для частини, пов’язаної з вебом.\r\nPydantic — для частини, пов’язаної з даними.",
+    "color_decorator": "yellow"
+  },
+  {
+    "id": "366ac5f5-c194-41bf-904e-3f587cf2daf7",
+    "school": "fr/BK",
+    "themes": "py",
+    "title": "uv",
+    "title_link": "https://docs.astral.sh/uv/getting-started/installation/",
+    "description": "менеджер Python-проєктів",
+    "links": "https://www.youtube.com/live/b0dMQxV59Wg",
+    "number_lection": 1,
+    "time_lection": "00.47",
+    "sub_description": "uv узгоджує опис проєкту, точні версії пакетів і локальне середовище.",
+    "color_decorator": "blue"
+  }
+]

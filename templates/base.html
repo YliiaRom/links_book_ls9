@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="btn-color_themes black">Black</button>
+      <button class="btn-color_themes white">White</button>
+      {% include "header.html"%}
+    </header>
+    <main class="main-container">
+      <div class="logo-container">
+        <img src="/static/img/logo.png" alt="logo" class="logo" />
+        <img
+          src="/static/img/bg-logo.png"
+          alt="bg-logo"
+          width="40px"
+          class="bg-logo"
+        />
+      </div>
+      <h1 class="title">{{title}}</h1>
+      <button class="button-1 form-btn" id="open-form">Form</button>
+
+      {% block form %}{% endblock %} {%block links %}{%endblock%}
+      <!-- {%include"buttons.html" %} -->
+    </main>
+    {%include "footer.html"%}
+    <script src="/static/script.js" defer></script>
+    <script src="http://127.0.0.1:5500/livereload.js"></script>
+  </body>
+</html>

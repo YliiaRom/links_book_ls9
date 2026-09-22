@@ -1,0 +1,123 @@
+{% extends "base.html"%} {%block form%} {%include "form.html"%} {%endblock%}
+{%block links %}
+<div>
+  {% if links %}
+  <ul>
+    {% for link in links %}
+    <li class="card-item">
+      <div class="item-link">
+        <div class="title-container">
+          <div class="btn-small_container">
+            <p
+              class="title-link mini-btn color_decorator"
+              style="background-color: {{ link.color_decorator }};"
+            >
+              <!-- {{ link.color_decorator}} -->
+              ✏️
+            </p>
+            <p class="title-link mini-btn">{{ link.school }}</p>
+            <p class="title-link mini-btn">{{ link.themes}}</p>
+          </div>
+
+          <div class="link-container">
+            <a
+              href="{{link.title_link}}"
+              target="_blank"
+              class="title-link button-4"
+              >{{ link.title }}</a
+            >
+          </div>
+        </div>
+
+        <div class="about-link">
+          <div class="title-link">{{ link.description }}</div>
+
+          <div class="btn-small_container">
+            <p class="title-link mini-btn_2">{{ link.number_lection }}</p>
+            <p class="title-link mini-btn_2">{{ link. time_lection }}</p>
+          </div>
+        </div>
+      </div>
+      <a href="{{link.links}}" class="title-link button-3" target="_blank"
+        >{{ link.links }}</a
+      >
+      <div>{{link.sub_description}}</div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>Посилання завантажуються із сайту або ще не створені</p>
+  {% endif %}
+</div>
+{%endblock%}
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css/" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="btn-color_themes black">Black</button>
+      <button class="btn-color_themes white">White</button>
+    </header>
+    <main class="main-container">
+      <h1 class="title">{{title}}</h1>
+      <div>
+        {% if links %}
+        <ul>
+          {% for link in links %}
+          <li class="card-item">
+            <div class="item-link">
+              <div class="title-container">
+                <div class="btn-small_container">
+                  <p class="title-link mini-btn">{{ link.school }}</p>
+                  <p class="title-link mini-btn">{{ link.themes}}</p>
+                  <p class="title-link mini-btn color_decorator">
+                    {{ link.color_decorator}}
+                  </p>
+                </div>
+
+                <div class="link-container">
+                  <p class="title-link button-4">{{ link.title }}</p>
+                </div>
+              </div>
+
+              <div class="about-link">
+                <p class="title-link">{{ link.description }}</p>
+
+                <div class="btn-small_container">
+                  <p class="title-link mini-btn_2">{{ link.number_lection }}</p>
+                  <p class="title-link mini-btn_2">{{ link. time_lection }}</p>
+                </div>
+              </div>
+            </div>
+            <p class="title-link button-3">{{ link.links }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>Посилання завантажуються із сайту або ще не створені</p>
+        {% endif %}
+      </div>
+
+      <button class="button-1">button 1</button>
+      <button class="button-2">button 2</button>
+      <button class="button-3">button 3</button>
+      <button class="button-4">button 4</button>
+      <button class="button-5">11.2 5</button>
+      <button class="button-6">react</button>
+      <div class="text">
+        <button class="button-1">btn</button>lkdlkfl lkslkdslk
+      </div>
+
+
+    </main>
+
+    <script src="/static/script.js" defer></script>
+    <script src="http://127.0.0.1:5500/livereload.js"></script>
+  </body>
+</html> -->

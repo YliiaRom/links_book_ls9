@@ -1,0 +1,90 @@
+{% block form %}
+<form action="/links/add" method="post" class="form-container form-box">
+  <label for="school">Школа</label>
+  <input
+    type="text"
+    id="school"
+    name="school"
+    minlength="2"
+    maxlength="300"
+    required
+  />
+
+  <label for="themes">Тема</label>
+  <select id="themes" name="themes" required>
+    <option value="py">Python</option>
+    <option value="react">React</option>
+    <option value="js">JavaScript</option>
+    <option value="py_bk">Python Backend</option>
+  </select>
+
+  <label for="title">Назва</label>
+  <input
+    type="text"
+    id="title"
+    name="title"
+    minlength="1"
+    maxlength="1000"
+    required
+  />
+
+  <label for="title_link">Посилання</label>
+  <input
+    type="url"
+    id="title_link"
+    name="title_link"
+    minlength="1"
+    maxlength="1000"
+    required
+  />
+
+  <label for="description">Опис</label>
+  <textarea
+    id="description"
+    name="description"
+    maxlength="1000"
+    required
+  ></textarea>
+
+  <label for="links">Посилання</label>
+  <input type="url" id="links" name="links" maxlength="1000" required />
+
+  <label for="number_lection">Номер лекції</label>
+  <input
+    type="number"
+    id="number_lection"
+    name="number_lection"
+    min="1"
+    max="100"
+    required
+  />
+
+  <label for="time_lection">Час у відео</label>
+  <input
+    type="text"
+    id="time_lection"
+    name="time_lection"
+    pattern="\d{2}\.\d{2}"
+    placeholder="02.10"
+    required
+  />
+
+  <label for="sub_description">Нотатки</label>
+  <textarea
+    id="sub_description"
+    name="sub_description"
+    maxlength="1000"
+  ></textarea>
+
+  <label for="color_decorator">Колір</label>
+  <select id="color_decorator" name="color_decorator" required>
+    <option value="red">Червоний</option>
+    <option value="green">Зелений</option>
+    <option value="blue">Синій</option>
+    <option value="black">Чорний</option>
+    <option value="yellow">Жовтий</option>
+  </select>
+
+  <button type="submit">Додати посилання</button>
+</form>
+{%endblock%}

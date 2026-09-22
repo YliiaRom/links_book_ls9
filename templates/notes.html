@@ -1,0 +1,21 @@
+{% extends "base.html" %} {%block form%} {% include "task_form.html"%}
+{%endblock%} {% block links %}
+
+<div class="notes-container">
+  {% if tasks %} {% for task in tasks %}
+
+  <div class="note-item text">
+    <p>{{ task.task }}</p>
+
+    <form action="/notes/{{task.id}}/delete" method="post">
+      <button type="submit" class="button-1">❌</button>
+    </form>
+  </div>
+  {% endfor %} {% else %}
+
+  <p>Записів поки немає</p>
+
+  {% endif %}
+</div>
+
+{% endblock %}
